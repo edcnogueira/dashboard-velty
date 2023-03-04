@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="flex flex-row">
       <Sidebar />
-      <div className="flex flex-col w-full overflow-auto bg-blue-500">
+      <div className="flex flex-col w-full overflow-auto bg-primary-background">
         <Header />
         <Content>{children}</Content>
       </div>
