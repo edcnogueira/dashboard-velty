@@ -1,8 +1,8 @@
 export function Header() {
   return (
     <>
-      <div>Navegacao</div>
-      <div>titulo</div>
+      <p className="font-sans">Navegacao</p>
+      <div className="font-sans">titulo</div>
     </>
   );
 }
