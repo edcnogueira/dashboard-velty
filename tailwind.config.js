@@ -22,6 +22,7 @@ module.exports = {
         success: "#05CD99",
         danger: "#CD0505",
         unSelected: "#A3AED0",
+        inputText: "#8F9BBA",
       },
     },
   },
