@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Logo from "../../assets/logo.png";
+import { MenuItems } from "./MenuItems";
 
 export function Sidebar() {
   return (
@@ -13,6 +14,9 @@ export function Sidebar() {
           alt="logo"
           className="max-w-[175px] max-h-[61px] w-auto h-auto"
         />
+      </div>
+      <div className="pl-[31px] pt-[38px] w-full">
+        <MenuItems />
       </div>
     </div>
   );

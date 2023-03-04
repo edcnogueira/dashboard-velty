@@ -6,7 +6,7 @@ interface TextProps {
   children: ReactNode;
   asChild?: boolean;
   color?: "primary" | "secondary";
-  size?: "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl";
 }
 export function Heading({
   children,
@@ -20,6 +20,7 @@ export function Heading({
       className={clsx("font-sans", {
         "text-primary-text": color === "primary",
         "text-secondary-text": color === "secondary",
+        "text-[16px]": size === "sm",
         "text-[24px]": size === "md",
         "text-[34px]": size === "lg",
         "text-[48px]": size === "xl",
