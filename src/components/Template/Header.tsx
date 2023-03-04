@@ -1,8 +1,11 @@
+import { Heading } from "../Heading";
+import { Text } from "../Text";
+
 export function Header() {
   return (
     <>
-      <p className="font-sans">Navegacao</p>
-      <div className="font-sans">titulo</div>
+      <Text>Navegacao</Text>
+      <Heading size="lg">Velty Dashboard</Heading>
     </>
   );
 }
