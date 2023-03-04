@@ -1,11 +1,13 @@
 import { Heading } from "../Heading";
-import { Text } from "../Text";
+import { Navigarion } from "./Navigation";
 
 export function Header() {
   return (
     <>
-      <Text>Navegacao</Text>
-      <Heading size="lg">Velty Dashboard</Heading>
+      <div className="flex flex-col gap-[2px] pt-[49px]">
+        <Navigarion />
+        <Heading size="lg">Velty Dashboard</Heading>
+      </div>
     </>
   );
 }

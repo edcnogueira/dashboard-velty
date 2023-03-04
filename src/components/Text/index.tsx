@@ -17,7 +17,7 @@ export function Text({
   const Comp = asChild ? Slot : "span";
   return (
     <Comp
-      className={clsx("font-sans font-bold", {
+      className={clsx("font-sans font-medium", {
         "text-primary-text": color === "primary",
         "text-secondary-text": color === "secondary",
         "text-[12px]": size === "sm",
