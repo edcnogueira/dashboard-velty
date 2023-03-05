@@ -1,8 +1,8 @@
-import { House } from "phosphor-react";
 import { Heading } from "../Heading";
 
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { HomeSvg } from "./Icons";
 
 export function MenuItems() {
   const path = usePathname();
@@ -18,13 +18,14 @@ export function MenuItems() {
       <ol>
         <li className="flex flex-row items-center justify-between w-full py-[10px] cursor-pointer hover:bg-gray-100/50">
           <div className="flex flex-row gap-3">
-            <House
+            {/* <House
               className={clsx("w-[24px] h-[24px] ", {
                 "text-secondary-blue": dashboardPath,
                 "text-unSelected": !dashboardPath,
               })}
               weight="fill"
-            />
+            /> */}
+            <HomeSvg selected={dashboardPath} />
             <Heading size="sm" color={dashboardPath ? "primary" : "secondary"}>
               Dashboard
             </Heading>
