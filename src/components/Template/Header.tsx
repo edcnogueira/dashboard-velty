@@ -2,14 +2,25 @@ import { Heading } from "../Heading";
 import { Input } from "../Input";
 import { Navigarion } from "./Navigation";
 
+import Image from "next/image";
+import Avatar from "../../assets/Avatar.png";
+import { Alarm, Info, Moon } from "../../components/Template/Icons";
+
 const SearchHeader = () => {
   return (
     <>
-      <div className="flex flex-row gap-[20px] items-center justify-around h-full w-[422px] bg-white rounded-l-full rounded-r-full py-[10px] pl-[10px]">
+      <div className="flex flex-row gap-[20px] items-center justify-around h-full w-[422px] bg-white rounded-l-full rounded-r-full py-[10px] pl-[10px] mr-[22px] shadow-md">
         <Input.Search />
-        <div>teste</div>
-        <div>teste</div>
-        <div>teste</div>
+        <Alarm />
+        <Moon />
+        <Info />
+        <Image
+          className="w-[41px] h-[41px] rounded-full mr-2"
+          width={100}
+          height={100}
+          alt="avatar"
+          src={Avatar}
+        />
       </div>
     </>
   );
