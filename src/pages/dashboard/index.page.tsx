@@ -1,9 +1,10 @@
+import { Input } from "@/components/Input";
 import { Layout } from "@/components/Template/Layout";
 
 export default function Dashboard() {
   return (
     <Layout>
-      <div>olá</div>
+      <Input.Date placeholder="Data Inicial" />
     </Layout>
   );
 }
