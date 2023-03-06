@@ -55,7 +55,7 @@ const Date = forwardRef(
           mask="11/11/1111"
           placeholder={placeholder}
           className={clsx(
-            "bg-primary-background h-[41px] w-full rounded-l-full rounded-r-full pl-[40px] outline-none focus-within:ring-2 ring-transparent"
+            "bg-primary-background h-[41px] w-[214px] rounded-l-full rounded-r-full pl-[40px] outline-none focus-within:ring-2 ring-transparent"
           )}
           {...rest}
         />
