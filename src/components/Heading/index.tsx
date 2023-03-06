@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 interface TextProps {
   children: ReactNode;
   asChild?: boolean;
-  color?: "primary" | "secondary";
+  color?: "primary" | "secondary" | "white";
   size?: "sm" | "md" | "lg" | "xl";
 }
 export function Heading({
@@ -14,16 +14,17 @@ export function Heading({
   color = "primary",
   size = "md",
 }: TextProps) {
-  const Comp = asChild ? Slot : "h1";
+  const Comp = asChild ? Slot : "h2";
   return (
     <Comp
-      className={clsx("font-sans", {
+      className={clsx("font-sans font-bold", {
         "text-primary-text": color === "primary",
         "text-secondary-text": color === "secondary",
+        "text-white": color === "white",
         "text-[16px]": size === "sm",
-        "text-[24px]": size === "md",
+        "text-2xl": size === "md",
         "text-[34px]": size === "lg",
-        "text-[48px]": size === "xl",
+        "text-5xl": size === "xl",
       })}
     >
       {children}
