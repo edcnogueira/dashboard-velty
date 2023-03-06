@@ -5,9 +5,17 @@ import clsx from "clsx";
 
 interface MainProps {
   color?: "red" | "blue" | "green";
+  description?: string;
+  value: string;
+  average: string;
 }
 
-const Main = ({ color = "red" }: MainProps) => {
+const Main = ({
+  color = "red",
+  description = "Receita Total",
+  value = "00,00",
+  average = "00,00",
+}: MainProps) => {
   return (
     <div
       className={clsx(
@@ -25,16 +33,16 @@ const Main = ({ color = "red" }: MainProps) => {
         </div>
         <div className="flex flex-col pt-[28px] pb-[28px] ">
           <Heading color="white" size="xl">
-            R$ 312.321,00
+            {value}
           </Heading>
           <Text size="lg" color="white-70">
-            Receita Total
+            {description}
           </Text>
         </div>
       </div>
       <div className="w-full border border-primary-background"></div>
       <div className="flex flex-col pt-[18px] pl-4">
-        <Heading color="white">R$ 67,20</Heading>
+        <Heading color="white">{average}</Heading>
         <Text color="white-70">Média por cliente</Text>
       </div>
     </div>

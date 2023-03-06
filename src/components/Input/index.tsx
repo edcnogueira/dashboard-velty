@@ -27,7 +27,7 @@ const Search = forwardRef(({ ...rest }: InputProps, ref: LegacyRef<HTMLInputElem
         id="search"
         placeholder="Buscar"
         className={clsx(
-          "bg-primary-background h-[41px] w-full rounded-l-full rounded-r-full pl-[40px] outline-none focus-within:ring-2 ring-secondary-blue"
+          "bg-primary-background h-[41px] w-full rounded-l-full rounded-r-full pl-[40px] outline-none focus-within:ring-2 ring-transparent"
         )}
         {...rest}
       />
