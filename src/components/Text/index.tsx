@@ -8,6 +8,12 @@ interface TextProps {
   color?: "primary" | "secondary" | "white-70";
   size?: "sm" | "md" | "lg";
 }
+
+/**
+ *
+ * @param size sm: 12px; md: 14px; lg: 24px;
+ * @returns
+ */
 export function Text({
   children,
   asChild = false,

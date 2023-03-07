@@ -49,6 +49,39 @@ const Main = ({
   );
 };
 
+export type DescType = Record<"description" | "value" | "percentage", string> & {
+  color: "success" | "danger";
+  subValue?: string | undefined;
+  id?: number;
+};
+
+export const Desc = ({
+  description = "",
+  value = "",
+  percentage = "",
+  color = "success",
+  subValue,
+}: DescType) => {
+  return (
+    <div className="flex flex-col w-[249px] h-[95px] bg-white rounded-[20px] justify-center pl-[23px]">
+      <Text color="secondary">{description}</Text>
+      {subValue ? (
+        <div className="flex flex-row items-center gap-1">
+          <Heading>{value}</Heading>
+          <Text color="secondary">{subValue}</Text>
+        </div>
+      ) : (
+        <Heading>{value}</Heading>
+      )}
+
+      <Heading size="xs" color={color}>
+        {percentage}
+      </Heading>
+    </div>
+  );
+};
+
 export const CardDashboard = {
   Main,
+  Desc,
 };

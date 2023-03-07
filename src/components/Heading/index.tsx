@@ -5,8 +5,8 @@ import { ReactNode } from "react";
 interface TextProps {
   children: ReactNode;
   asChild?: boolean;
-  color?: "primary" | "secondary" | "white";
-  size?: "sm" | "md" | "lg" | "xl";
+  color?: "primary" | "secondary" | "white" | "success" | "danger";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 export function Heading({
   children,
@@ -21,6 +21,9 @@ export function Heading({
         "text-primary-text": color === "primary",
         "text-secondary-text": color === "secondary",
         "text-white": color === "white",
+        "text-success": color === "success",
+        "text-danger": color === "danger",
+        "text-xs": size === "xs",
         "text-[16px]": size === "sm",
         "text-2xl": size === "md",
         "text-[34px]": size === "lg",
