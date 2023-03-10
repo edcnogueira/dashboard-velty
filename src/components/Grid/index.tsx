@@ -33,10 +33,9 @@ interface GridItemProps {
   sm?: SizeGridProps;
   md?: SizeGridProps;
   lg?: SizeGridProps;
-  key?: any;
 }
 
-function Item({ xs = 12, sm, md, lg, key = "", children }: GridItemProps) {
+function Item({ xs = 12, sm, md, lg, children }: GridItemProps) {
   return (
     <div
       className={clsx("", {
@@ -84,7 +83,6 @@ function Item({ xs = 12, sm, md, lg, key = "", children }: GridItemProps) {
         "lg:col-span-2": lg === 2,
         "lg:none": xs === 0,
       })}
-      key={key}
     >
       {children}
     </div>

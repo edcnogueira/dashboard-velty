@@ -142,9 +142,8 @@ export default function Dashboard() {
         <div className="mt-5 mb-5">
           <G.Container>
             {valueInfo.map(({ id, value, subTitle, percentage, subValue }) => (
-              <G.Item xs={3}>
+              <G.Item key={id} xs={3}>
                 <C.Info
-                  key={id}
                   value={value}
                   subTitle={subTitle}
                   percentage={percentage}
