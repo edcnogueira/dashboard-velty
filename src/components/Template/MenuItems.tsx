@@ -11,7 +11,7 @@ export function MenuItems() {
   const dashboardPath = path === "/dashboard" ? true : false;
   const vendasPath = path === "/vendas" ? true : false;
   const relatoriosboardPath = path === "/relatorios" ? true : false;
-  const lojasParceirasboardPath = path === "/parcerias " ? true : false;
+  const lojasParceirasboardPath = path === "/parcerias" ? true : false;
   const clientesboardPath = path === "/clientes" ? true : false;
 
   return (
