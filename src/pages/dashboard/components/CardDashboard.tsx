@@ -81,7 +81,48 @@ export const Desc = ({
   );
 };
 
+export type InfoType = {
+  id?: number;
+  value: number;
+  subTitle: string;
+  percentage: string;
+  subValue?: string;
+};
+
+export const Info = ({
+  value = 0,
+  subTitle = "",
+  percentage = "",
+  subValue = "",
+}: InfoType) => {
+  return (
+    <div className="flex flex-col w-[387px] h-[196px] bg-white rounded-[20px] justify-center pl-[23px]">
+      <div className="pl-3">
+        <div className="flex justify-start items-center w-[56px] h-[56px] rounded-full bg-white">
+          <Dollar color="dark-blue" />
+        </div>
+        {!!subValue ? (
+          <div className="flex flex-row items-center gap-1">
+            <Heading size="lg">{value}</Heading>
+            <Text color="secondary">{subValue}</Text>
+          </div>
+        ) : (
+          <Heading size="lg">{value}</Heading>
+        )}
+
+        <Text color="secondary">{subTitle}</Text>
+        <div className="mt-3">
+          <Heading size="xs" color="success">
+            {percentage}
+          </Heading>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const CardDashboard = {
   Main,
   Desc,
+  Info,
 };

@@ -26,7 +26,7 @@ export function Heading({
         "text-xs": size === "xs",
         "text-[16px]": size === "sm",
         "text-2xl": size === "md",
-        "text-[34px]": size === "lg",
+        "text-4xl": size === "lg",
         "text-5xl": size === "xl",
       })}
     >

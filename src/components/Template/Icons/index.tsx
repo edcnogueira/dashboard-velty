@@ -168,7 +168,7 @@ export const DataSvg = () => {
 };
 
 interface DollarProps {
-  color?: "red" | "blue" | "green";
+  color?: "red" | "blue" | "green" | "dark-blue";
 }
 
 export const Dollar = ({ color = "red" }: DollarProps) => {
@@ -186,6 +186,7 @@ export const Dollar = ({ color = "red" }: DollarProps) => {
           "#EC7A7A": color === "red",
           "#7A85EC": color === "blue",
           "#65D4AC": color === "green",
+          "#4318FF": color === "dark-blue",
         })}
       />
     </svg>

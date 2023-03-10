@@ -1,6 +1,6 @@
 import { Grid as G } from "@/components/Grid";
 import { Layout } from "@/components/Template/Layout";
-import { CardDashboard as C, DescType } from "./components/CardDashboard";
+import { CardDashboard as C, DescType, InfoType } from "./components/CardDashboard";
 
 import { FiltroData } from "./components/FiltroData";
 
@@ -82,6 +82,34 @@ export default function Dashboard() {
     },
   ];
 
+  const valueInfo: InfoType[] = [
+    {
+      id: 1,
+      value: 312.321,
+      subTitle: "Cotações Realizadas",
+      percentage: "+15.3%(+223)",
+    },
+    {
+      id: 2,
+      value: 212.012,
+      subTitle: "Vendas Finalizadas",
+      percentage: "+15.3%(+223)",
+    },
+    {
+      id: 3,
+      value: 42.021,
+      subTitle: "Cotações não concluídas",
+      percentage: "+15.3%(+223)",
+    },
+    {
+      id: 4,
+      value: 3.122,
+      subTitle: "Cotações não respondidas",
+      percentage: "+15.3%(+223)",
+      subValue: "3%",
+    },
+  ];
+
   return (
     <Layout>
       <FiltroData />
@@ -111,6 +139,21 @@ export default function Dashboard() {
             </G.Item>
           ))}
         </G.Container>
+        <div className="mt-5 mb-5">
+          <G.Container>
+            {valueInfo.map(({ id, value, subTitle, percentage, subValue }) => (
+              <G.Item xs={3}>
+                <C.Info
+                  key={id}
+                  value={value}
+                  subTitle={subTitle}
+                  percentage={percentage}
+                  subValue={subValue && subValue}
+                />
+              </G.Item>
+            ))}
+          </G.Container>
+        </div>
       </div>
     </Layout>
   );
